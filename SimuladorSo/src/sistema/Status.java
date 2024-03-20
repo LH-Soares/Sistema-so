@@ -2,16 +2,18 @@ package sistema;
 
 import memoria.MenRam;
 import memoria.MenVirtual;
+import memoria.MenHD;
 
 public class Status {
 	private MenRam MenFisica;
 	private MenVirtual MV;
-
+	private MenHD HD;
 	private int contador = 0;
 	
-	public Status(MenRam MenFisica_,MenVirtual MV_ ) {
+	public Status(MenRam MenFisica_,MenVirtual MV_ ,MenHD HD_) {
 		this.MenFisica = MenFisica_;
 		this.MV = MV_;
+		this.HD = HD_;
 	}
 	
 	public  void status_fim() {
@@ -20,6 +22,8 @@ public class Status {
 			System.out.println("Status Final:");
 			MV.mostrarTudoMenVirutal();
 			MenFisica.mostrarTudoRam();
+			HD.mostrarTudoHD();
 		}
 	}
 }
+
