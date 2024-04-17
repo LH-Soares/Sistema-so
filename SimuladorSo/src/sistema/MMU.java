@@ -119,7 +119,7 @@ public class MMU {
 	
 	private void liberarEspacoRam() {
 		Integer IndicePagina, IndiceLivreHD, IndiceRam, valorRam ;
-		IndicePagina = LRU.removerUm();												//escolhendo quem vai pro HD
+		IndicePagina = LRU.removerAleatorio();												//escolhendo quem vai pro HD
 		System.out.println("O algoritmo LRU escolheu a pagina:" + IndicePagina);
 		IndiceLivreHD = HD.getIndiceLivreHD();										//pegando indice livre no HD
 		
